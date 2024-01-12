@@ -1,0 +1,415 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    background-color: #ece7e1;
+    color: #1a1818;
+}
+
+header {
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+.nav-bar,
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px 0 30px;
+    font-size: 10px;
+}
+
+.info-left,
+.info-right {
+    gap: 20px;
+}
+
+.info-left {
+    display: flex;
+    justify-content: left;
+    padding: 10px;
+}
+
+.info-left .year {
+    display: block;
+}
+
+.info-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.info-right p,
+.info-right a,
+.footer-right a {
+    text-decoration: none;
+    color: grey;
+}
+
+.info-right button {
+    background-color: transparent;
+    font-size: 10px;
+    color: grey;
+    cursor: pointer;
+}
+
+.info-right a:hover,
+.footer-right a:hover{
+    color: darkgrey;
+    transition: 0.3s;
+}
+
+.download,
+#download {
+    padding: 10px;
+    border-radius: 0px;
+    border: solid 1px;
+}
+
+.download:hover,
+#download:hover {
+    transition: 0.5s;
+    border-radius: 10px;
+    background-color: #1a1818;
+    border-color: transparent;
+    color: #ece7e1;
+}
+
+.nav-bar .toggle-btn {
+    color: #1a1818;
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-bar .toggle-btn:hover {
+    color: #53403b;
+}
+
+.dropdown-menu {
+    display: none;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-links {
+    position: absolute;
+    background-color: #ece7e1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    top: 90px;
+    right: 30px;
+}
+
+.dropdown-btn {
+    width: 120px;
+    height: 30px;
+    border: 0.5px solid;
+    border-radius: 0px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: ease 0.5s;
+    font-size: 10px;
+}
+
+.dropdown-btn:hover {
+    border-radius: 10px;
+    background-color: #1a1818;
+    border: transparent;
+    color: #ece7e1;
+}
+
+.dropdown-btn a {
+    text-decoration: none;
+    color: #1a1818;
+}
+
+.intro-container {
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    max-width: 1150px;
+}
+
+header h1 {
+    font-family: 'GrandSlang-Roman', 'Gloock', serif;
+    font-size: 14vw;
+    line-height: 90%;
+    font-weight: 400;
+    margin-left: 2px;
+}
+
+header h1.first-name {
+    margin-left: -10px;
+}
+
+@media screen and (max-width: 768px) {
+    header h1.first-name {
+        margin-left: -2px;
+    }
+}
+
+header h2 {
+    margin-top: 70px;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.intro-container p {
+    font-size: 14px;
+    margin-top: 20px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.section-head {
+    font-size: 50px;
+    font-family: 'GrandSlang-Roman', 'Gloock', serif;
+    font-weight: 400;
+    font-kerning: auto;
+}
+
+.edu-container {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 40px;
+    font-family: 'Inter', sans-serif;
+}
+
+.degree-wrapper {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 0.5px solid;
+    padding: 20px 0;
+}
+
+.degree-wrapper p {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.degree-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.degree-date {
+    width: 20%;
+}
+
+.degree-name {
+    width: 25%;
+    font-weight: 600;
+}
+
+.uni-name {
+    width: 35%;
+    text-align: center;
+}
+
+.grades {
+    width: 20%;
+    text-align: center;
+}
+
+.section-desc {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 200;
+    margin-top: 10px;
+}
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+}
+
+.portfolio-container {
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.selected-works {
+    margin: 0 40px;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.work {
+    padding: 20px;
+    border: 0.5px solid;
+    flex: 1 1 300px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: ease 0.5s;
+}
+
+.work.placeholder {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.work:hover {
+    background-color: #ddd5cb;
+    scale: 1.02; /* Makes the box size bigger on hover */
+}
+
+.image {
+    object-fit: contain; /* sets how the content of an element should be resized to fit its container. */
+    height: 200px;
+    width: 100%;
+    border: 0.5px solid;
+    border-radius: 10px;
+    background-color: #ece7e1;
+}
+
+.work-name,
+.work-desc {
+    font-size: 14px;
+}
+
+.work-name {
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.work-desc {
+    font-size: 12px;
+}
+
+.work-languages ul {
+    display: flex;
+    list-style-type: none;
+    align-items: baseline;
+    padding: 0px;
+    margin: 0;
+    text-transform: uppercase;
+    gap: 10px;
+}
+
+.work-languages li {
+    font-size: 12px;
+    font-weight: 500;
+    color: #53403b;
+}
+
+.work-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.work-buttons button {
+    background-color: transparent;
+    border: 0.5px solid;
+    border-radius: 7.5px;
+    padding: 5px;
+    font-size: 10px;
+    transition: ease 0.5s;
+}
+
+.work-buttons button:hover {
+    background-color: #c8b8a9;
+    cursor: pointer;
+}
+
+.contact-form-container {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ece7e1;
+}
+
+.contact-form-container.show {
+    display: block; /* change class on click */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 40px;
+}
+
+.contact-form h2 {
+    font-size: 8vw;
+}
+
+.contact-form button {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    background-color: transparent;
+    border: 0.5px solid;
+    border-radius: 0px;
+    padding: 10px;
+    cursor: pointer;
+    transition: ease 0.5s;
+}
+
+/*     transition: 0.3s;
+    border-radius: 10px;
+    background-color: ;
+    border-color: transparent;
+    color: #ece7e1; */
+
+.contact-form button:hover {
+    background-color: #1a1818;
+    border-radius: 10px;
+    color: #ece7e1;
+}
+
+footer {
+    font-family: sans-serif;
+    padding: 30px 10px 30px;
+}
+
+@media screen and (max-width: 900px) {
+    .info-left {
+        flex-direction: column;
+        gap: 3px;
+    }
+    .nav-bar .info-right {
+        display: none;
+    }
+    .nav-bar .toggle-btn {
+        display: block;
+    }
+    .info-left .year {
+        display: none;
+    }
+    .name-intro h2 {
+        font-size: 11px;
+    }
+}
