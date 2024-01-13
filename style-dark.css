@@ -414,15 +414,17 @@ footer {
     padding: 30px 10px 30px;
 }
 
-@media screen and (max-width: 768px) {
-    header h1.first-name {
-        margin-left: -2px;
-    }
+@media screen and (max-width: 480px) {
     .name-intro {
         margin-top: -180px;
     }
 }
 
+@media screen and (max-width: 768px) {
+    header h1.first-name {
+        margin-left: -2px;
+    }
+}
 @media screen and (max-width: 900px) {
     .info-left {
         flex-direction: row;
