@@ -170,7 +170,7 @@ header h1.first-name {
 
 header h2 {
     margin-top: 70px;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 200;
 }
 
@@ -411,14 +411,11 @@ footer {
     .info-left .year {
         display: none;
     }
-    .name-intro h2 {
-        font-size: 18px;
-    }
 }
 
 @media screen and (min-width: 1480px) {
     .name-intro h1 {
-        font-size: 12vw;
+        font-size: 11vw;
     }
     .nav-bar p,
     .nav-bar a,
