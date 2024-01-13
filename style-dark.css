@@ -31,6 +31,12 @@ header {
     font-size: 10px;
 }
 
+.light-dark-btn {
+    width: 20px;
+    background: none;
+    border: 0;
+}
+
 #lightmode-toggle {
     width: 26px;
     cursor: pointer;
