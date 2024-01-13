@@ -11,6 +11,9 @@ html {
 body {
     background-color: #ece7e1;
     color: #1a1818;
+    max-width: 1440px;
+    margin: 0 auto;
+    float: none;
 }
 
 header {
@@ -378,6 +381,7 @@ header h2 {
     transition: ease 0.5s;
 }
 
+/* iOS devices defaulted buttons to blue, changed overall styling to black */
 button {
     color: #000;
   }
@@ -408,7 +412,18 @@ footer {
         display: none;
     }
     .name-intro h2 {
-        font-size: 11px;
+        font-size: 18px;
     }
 }
 
+@media screen and (min-width: 1480px) {
+    .name-intro h1 {
+        font-size: 12vw;
+    }
+    .nav-bar p,
+    .nav-bar a,
+    .nav-bar button,
+    .footer-container p {
+        font-size: 12px;
+    }
+}
