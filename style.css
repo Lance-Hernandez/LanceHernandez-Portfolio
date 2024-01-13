@@ -411,6 +411,9 @@ footer {
     .info-left .year {
         display: none;
     }
+    header h2 {
+        margin-top: 40px;
+    }
 }
 
 @media screen and (min-width: 1480px) {
