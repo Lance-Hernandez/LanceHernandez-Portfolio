@@ -31,6 +31,18 @@ header {
     font-size: 10px;
 }
 
+#lightmode-toggle {
+    width: 26px;
+    cursor: pointer;
+    display: block;
+}
+
+#darkmode-toggle {
+    width: 23px;
+    cursor: pointer;
+    display: none;
+}
+
 .info-left,
 .info-right {
     gap: 20px;
@@ -38,8 +50,19 @@ header {
 
 .info-left {
     display: flex;
+    flex-direction: row;
     justify-content: left;
+    align-items: center;
     padding: 10px;
+}
+
+.school-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
 }
 
 .info-left .year {
@@ -400,7 +423,15 @@ footer {
 
 @media screen and (max-width: 900px) {
     .info-left {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+    .school-container {
+        display: flex;
         flex-direction: column;
+        justify-content: left;
+        align-items: center;
         gap: 3px;
     }
     .nav-bar .info-right {

@@ -33,3 +33,23 @@ const openDropContact = document.getElementById("open-drop-contact");
 openDropContact.addEventListener('click', () => {
     contactContainer.classList.add('show');
 });
+
+// Light-Dark Mode Toggle
+
+const stylesheetLink = document.getElementById("stylesheet");
+const lightModeToggle = document.getElementById("lightmode-toggle");
+const darkModeToggle = document.getElementById("darkmode-toggle");
+
+// When sun icon is clicked, it changes to dark-mode, hiding sun and showing moon
+lightModeToggle.addEventListener("click", () => {
+    stylesheetLink.href = "style-dark.css";
+    lightModeToggle.style.display = "none";
+    darkModeToggle.style.display = "block";
+});
+
+// When sun icon is clicked, it changes to light-mode, hiding moon and showing sun
+darkModeToggle.addEventListener("click", () => {
+    stylesheetLink.href = "style-light.css";
+    lightModeToggle.style.display = "block";
+    darkModeToggle.style.display = "none";
+});
