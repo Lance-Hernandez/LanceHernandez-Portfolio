@@ -93,6 +93,7 @@ header {
     font-size: 1.8rem;
     cursor: pointer;
     display: none;
+    padding-right: 10px;
 }
 
 .nav-bar .toggle-btn:hover {
