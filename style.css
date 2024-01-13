@@ -378,11 +378,9 @@ header h2 {
     transition: ease 0.5s;
 }
 
-/*     transition: 0.3s;
-    border-radius: 10px;
-    background-color: ;
-    border-color: transparent;
-    color: #ece7e1; */
+button {
+    color: #000;
+  }
 
 .contact-form button:hover {
     background-color: #1a1818;
@@ -413,3 +411,4 @@ footer {
         font-size: 11px;
     }
 }
+
