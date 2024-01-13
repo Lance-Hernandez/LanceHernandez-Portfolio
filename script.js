@@ -40,11 +40,15 @@ const stylesheetLink = document.getElementById("stylesheet");
 const lightModeToggle = document.getElementById("lightmode-toggle");
 const darkModeToggle = document.getElementById("darkmode-toggle");
 
+const storedMode = localStorage.getItem("preferredMode");
+
 // When sun icon is clicked, it changes to dark-mode, hiding sun and showing moon
 lightModeToggle.addEventListener("click", () => {
     stylesheetLink.href = "style-dark.css";
     lightModeToggle.style.display = "none";
     darkModeToggle.style.display = "block";
+
+    localStorage.setItem("preferredMode", "dark");
 });
 
 // When sun icon is clicked, it changes to light-mode, hiding moon and showing sun
@@ -52,4 +56,6 @@ darkModeToggle.addEventListener("click", () => {
     stylesheetLink.href = "style-light.css";
     lightModeToggle.style.display = "block";
     darkModeToggle.style.display = "none";
+
+    localStorage.setItem("preferredMode", "light");
 });
