@@ -1,4 +1,4 @@
-# Lance Hernandez Portfolio V1.0
+# Lance Hernandez Portfolio V1.1
 
 ## A responsive personal portfolio website designed and coded from scratch.
 
@@ -8,16 +8,19 @@ This project explores the use of HTML, CSS and JS. JavaScript is used to increas
 
 Refinement, iterative updates and additional features will be documented and deployed. Currently the website is deployed on Netlify but considering to deploy on Hostinger in the future to have a custom domain and for more settings and capabilities.
 
-Version 1.0:
+### Version 1.0:
 - Landing page
 - Portfolio showcase
 - Navigation bar and drop-down menu
 - Get in touch pop-up (WIP)
 - Mobile and tablet screen responsiveness
 
-Version 1.1 (future release):
+### Version 1.1:
+- Added Light and Dark mode capabilities
+
+### Version 1.2 (future release):
 - Contact form and social links to be added to GET IN TOUCH button
 
-Upcoming features (to be added in future):
+### Upcoming features (to be added in future):
 - Blog (?)
 - Course reviews for Computer Science core and elective classes
