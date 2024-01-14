@@ -304,6 +304,33 @@ header h2 {
     gap: 13px;
 }
 
+@media screen and (max-width: 830px) {
+    .skills-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        padding: 0 40px;
+    }
+    .skills-box {
+        border: 0.5px solid;
+        border-radius: 20px;
+        width: 100%;
+        padding: 20px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        transition: ease 0.5s;
+        row-gap: 20px;
+    }
+    .skills-box:hover {
+        scale: 1.02;
+        background-color: #ddd5cb;
+    }
+    .skills {
+        flex: 1 1 100px;
+    }
+}
+
 /* PORTFOLIO */
 
 .portfolio {
