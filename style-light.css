@@ -266,6 +266,47 @@ header h2 {
     margin-top: 10px;
 }
 
+/* SKILLS */
+
+.skills-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 40px;
+    flex-grow: 1;
+}
+
+.skills-box {
+    display: flex;
+    flex-direction: row;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    gap: 10px;
+}
+
+.skills p {
+    font-size: 10px;
+    font-family: 'Inter', serif;
+    text-transform: uppercase;
+}
+
+.skills iconify-icon {
+    margin-top: 3px;
+    color: #1a1818;
+}
+
+.skills.photoshop {
+    gap: 13px;
+}
+
+/* PORTFOLIO */
+
 .portfolio {
     display: flex;
     flex-direction: column;
