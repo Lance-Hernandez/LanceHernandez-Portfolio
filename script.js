@@ -1,4 +1,6 @@
-console.log("Lance was here!");
+if (console && console.log) {
+    console.log("Lance was here!");
+}
 
 // Contact form navigation bar
 
@@ -59,3 +61,31 @@ darkModeToggle.addEventListener("click", () => {
 
     localStorage.setItem("preferredMode", "light");
 });
+
+// Contact Form
+
+const contactForm = document.querySelector("#contact-form-container form"),
+    statusTxt = contactForm.querySelector(".submit-stage p");
+
+contactForm.onsubmit = (e) => {
+    e.preventDefault(); // Prevent form from submitting
+    statusTxt.style.display = "block";
+
+    let xhr = new XMLHttpRequest(); // Create new XML object
+    xhr.open("POST", "message.php", true); // Send post request to message.php file
+    xhr.onreadystatechange = () => { // Use onreadystatechange instead of onload
+        if (xhr.readyState == 4) { // Check the ready state
+            if (xhr.status == 200) { // If ajax status = 200
+                let response = xhr.responseText; // Use responseText instead of response
+                if(response.indexOf("Email and password field is required!") != -1 || response.indexOf("Enter a valid email address!") != -1 || response.indexOf("Sorry, failed to send your message") != -1 )
+                    statusTxt.style.color = "red";
+                statusTxt.innerText = response;
+            } else {
+                console.error("Error:", xhr.status, xhr.statusText);
+            }
+        }
+    };
+    
+    let formData = new FormData(); // Creating new FormData obj. This obj is used to send form data
+    xhr.send(formData); // Send form data
+};
