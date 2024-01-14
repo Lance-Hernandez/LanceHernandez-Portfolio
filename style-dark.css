@@ -152,7 +152,7 @@ header {
     height: 30px;
     border: 0.5px solid;
     border-radius: 0px;
-    background-color: transparent;
+    background-color: #3f3b3c;
     cursor: pointer;
     transition: ease 0.5s;
     font-size: 10px;
