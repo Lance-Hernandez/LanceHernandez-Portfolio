@@ -1,4 +1,4 @@
-# Lance Hernandez Portfolio V1.1
+# Lance Hernandez Portfolio V1.2
 
 ## A responsive personal portfolio website designed and coded from scratch.
 
@@ -19,9 +19,10 @@ Refinement, iterative updates and additional features will be documented and dep
 - Added Light and Dark mode capabilities
 - Skills section
 
-### Version 1.2 (future release):
-- Contact form and social links to be added to GET IN TOUCH button
+### Version 1.2:
+- Contact form using Web3Forms (customised)
 
 ### Upcoming features (to be added in future):
+- Social media links to contact form (?)
 - Blog (?)
 - Course reviews for Computer Science core and elective classes
