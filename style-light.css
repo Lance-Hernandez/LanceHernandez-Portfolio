@@ -462,6 +462,7 @@ header h2 {
 
 .close-contact-icon {
     width: 30px;
+    cursor: pointer;
 }
 
 .contact-form h2 {
@@ -528,10 +529,14 @@ header h2 {
     gap: 40px;
 }
 
-.submit-stage {
+#result {
     height: 20px;
     max-width: 300px;
     text-align: center;
+    font-size: 10px;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .send-contact-btn p {

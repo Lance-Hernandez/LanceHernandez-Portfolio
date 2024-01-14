@@ -63,29 +63,37 @@ darkModeToggle.addEventListener("click", () => {
 });
 
 // Contact Form
+// From web3form docs
 
-const contactForm = document.querySelector("#contact-form-container form"),
-    statusTxt = contactForm.querySelector(".submit-stage p");
+const form = document.getElementById('form');
+const result = document.getElementById('result');
 
-contactForm.onsubmit = (e) => {
-    e.preventDefault(); // Prevent form from submitting
-    statusTxt.style.display = "block";
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+  result.innerHTML = "Please wait..."
 
-    let xhr = new XMLHttpRequest(); // Create new XML object
-    xhr.open("POST", "message.php", true); // Send post request to message.php file
-    xhr.onreadystatechange = () => { // Use onreadystatechange instead of onload
-        if (xhr.readyState == 4) { // Check the ready state
-            if (xhr.status == 200) { // If ajax status = 200
-                let response = xhr.responseText; // Use responseText instead of response
-                if(response.indexOf("Email and password field is required!") != -1 || response.indexOf("Enter a valid email address!") != -1 || response.indexOf("Sorry, failed to send your message") != -1 )
-                    statusTxt.style.color = "red";
-                statusTxt.innerText = response;
+    fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+                result.innerHTML = json.message;
             } else {
-                console.error("Error:", xhr.status, xhr.statusText);
+                console.log(response);
+                result.innerHTML = json.message;
             }
-        }
-    };
-    
-    let formData = new FormData(); // Creating new FormData obj. This obj is used to send form data
-    xhr.send(formData); // Send form data
-};
+        })
+        .catch(error => {
+            console.log(error);
+            result.innerHTML = "Something went wrong!";
+        })
+});

@@ -434,6 +434,8 @@ header h2 {
     cursor: pointer;
 }
 
+/* CONTACT FORM */
+
 .contact-form-container {
     display: none; /* Hidden by default */
     position: fixed;
@@ -457,8 +459,91 @@ header h2 {
     gap: 40px;
 }
 
+.close-contact-icon {
+    width: 30px;
+    cursor: pointer;
+}
+
 .contact-form h2 {
-    font-size: 8vw;
+    font-size: 48px;
+    font-family: 'GrandSlang-Roman', 'Gloock', serif;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.contact-field {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-icon {
+    width: 20px;
+}
+
+.input-field input {
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 0.5px solid;
+    font-size: 10px;
+    padding: 10px;
+    text-transform: uppercase;
+    color: #ece7e1;
+}
+
+.contact-message {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.contact-message textarea {
+    background-color: transparent;
+    border: 0;
+    padding: 5px;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    min-width: 200px;
+}
+
+.send-contact-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+#result {
+    height: 20px;
+    max-width: 300px;
+    text-align: center;
+    font-size: 10px;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.send-contact-btn p {
+    font-size: 10px;
+    font-family: 'Inter', sans-serif;
+    display: none;
+    text-transform: uppercase;
 }
 
 .contact-form button {
