@@ -17,6 +17,7 @@ Refinement, iterative updates and additional features will be documented and dep
 
 ### Version 1.1:
 - Added Light and Dark mode capabilities
+- Skills section
 
 ### Version 1.2 (future release):
 - Contact form and social links to be added to GET IN TOUCH button
